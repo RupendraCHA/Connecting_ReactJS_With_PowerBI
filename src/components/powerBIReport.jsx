@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";import { models, Report } from "powerbi-client";
+import React, { useEffect, useRef } from "react";
+import { models, Report } from "powerbi-client";
 const PowerBIReport = ({ token }) => {
   const reportContainer = useRef(null);
 
@@ -21,7 +22,7 @@ const PowerBIReport = ({ token }) => {
     powerbi.embed(reportContainer.current, embedConfig);
   }, [token]);
 
-  return <div ref={reportContainer} style={{ height: "600px", width: "100%" }} />;
+  return <div ref={reportContainer} />;
 };
 
 export default PowerBIReport;
